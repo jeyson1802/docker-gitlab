@@ -4,8 +4,6 @@ services:
   redis:
     restart: always
     image: sameersbn/redis:latest
-    command:
-    - --loglevel warning
     volumes:
     - /srv/docker/gitlab/redis:/var/lib/redis:Z
 
@@ -51,10 +49,10 @@ services:
     - GITLAB_HTTPS=false
     - SSL_SELF_SIGNED=false
 
-    - GITLAB_HOST=10.230.168.223
+    - GITLAB_HOST=10.230.138.221
     - GITLAB_PORT=10080
     - GITLAB_SSH_PORT=10022
-    - GITLAB_RELATIVE_URL_ROOT=10.230.168.221
+    - GITLAB_RELATIVE_URL_ROOT=
     - GITLAB_SECRETS_DB_KEY_BASE=long-and-random-alphanumeric-string
     - GITLAB_SECRETS_SECRET_KEY_BASE=long-and-random-alphanumeric-string
     - GITLAB_SECRETS_OTP_KEY_BASE=long-and-random-alphanumeric-string
