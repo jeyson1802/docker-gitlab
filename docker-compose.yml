@@ -32,6 +32,9 @@ services:
     volumes:
     - /srv/docker/gitlab/gitlab:/home/git/data:Z
     environment:
+      GITLAB_OMNIBUS_CONFIG: |
+      external_url 'http://10.230.168.223'
+      
     - DEBUG=false
 
     - DB_ADAPTER=postgresql
