@@ -32,9 +32,7 @@ services:
     volumes:
     - /srv/docker/gitlab/gitlab:/home/git/data:Z
     environment:
-      GITLAB_OMNIBUS_CONFIG: |
-      external_url 'http://10.230.168.223'
-      
+
     - DEBUG=false
 
     - DB_ADAPTER=postgresql
@@ -53,23 +51,23 @@ services:
     - GITLAB_HTTPS=false
     - SSL_SELF_SIGNED=false
 
-    - GITLAB_HOST=localhost
+    - GITLAB_HOST=10.230.168.223
     - GITLAB_PORT=10080
     - GITLAB_SSH_PORT=10022
-    - GITLAB_RELATIVE_URL_ROOT=
+    - GITLAB_RELATIVE_URL_ROOT=10.230.168.221
     - GITLAB_SECRETS_DB_KEY_BASE=long-and-random-alphanumeric-string
     - GITLAB_SECRETS_SECRET_KEY_BASE=long-and-random-alphanumeric-string
     - GITLAB_SECRETS_OTP_KEY_BASE=long-and-random-alphanumeric-string
 
-    - GITLAB_ROOT_PASSWORD=
-    - GITLAB_ROOT_EMAIL=
+    - GITLAB_ROOT_PASSWORD=fabrica2018
+    - GITLAB_ROOT_EMAIL=jventura@consorcio-swf.com
 
     - GITLAB_NOTIFY_ON_BROKEN_BUILDS=true
     - GITLAB_NOTIFY_PUSHER=false
 
-    - GITLAB_EMAIL=notifications@example.com
-    - GITLAB_EMAIL_REPLY_TO=noreply@example.com
-    - GITLAB_INCOMING_EMAIL_ADDRESS=reply@example.com
+    - GITLAB_EMAIL=jventura@consorcio-swf.com
+    - GITLAB_EMAIL_REPLY_TO=jventura@consorcio-swf.com
+    - GITLAB_INCOMING_EMAIL_ADDRESS=jventura@consorcio-swf.com
 
     - GITLAB_BACKUP_SCHEDULE=daily
     - GITLAB_BACKUP_TIME=01:00
